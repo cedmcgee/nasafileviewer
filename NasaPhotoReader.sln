@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NasaPhotoReader", "NasaPhot
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NasaPhotos.Models", "NasaPhotos.Models\NasaPhotos.Models.csproj", "{877CFF7C-4F2C-41DB-8329-8A4835667BEE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NasaPictureDisplayer", "NasaPictureDisplayer\NasaPictureDisplayer.csproj", "{5A4EEA14-3407-4172-A2CC-3B78BA083C31}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{877CFF7C-4F2C-41DB-8329-8A4835667BEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{877CFF7C-4F2C-41DB-8329-8A4835667BEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{877CFF7C-4F2C-41DB-8329-8A4835667BEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A4EEA14-3407-4172-A2CC-3B78BA083C31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A4EEA14-3407-4172-A2CC-3B78BA083C31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A4EEA14-3407-4172-A2CC-3B78BA083C31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A4EEA14-3407-4172-A2CC-3B78BA083C31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
