@@ -2,11 +2,17 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Web;
 using System.Threading.Tasks;
 using NasaPhotos.Models;
 using NasaPhotoReader.Utilities;
 using Microsoft.AspNetCore.Mvc;
 using NasaPhotoReader.Web.Models;
+
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Configuration.Json;
+using Microsoft.Extensions.FileProviders;
+using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace NasaPhotoReader.Web.Controllers
 {
@@ -15,6 +21,9 @@ namespace NasaPhotoReader.Web.Controllers
         public IActionResult Index()
         {
             ProcessImages();
+
+            
+
             return View();
         }
 
@@ -81,4 +90,5 @@ namespace NasaPhotoReader.Web.Controllers
 
             }
         }
+    }
 }

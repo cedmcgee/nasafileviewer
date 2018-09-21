@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NasaPhotoReader.Utilities",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NasaPhotoReader.Web", "NasaPhotoReader.Web\NasaPhotoReader.Web.csproj", "{6893C77C-2BBB-4FD0-9188-0B944657A86E}"
 EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{DAF65FDB-D612-4D84-A326-D29D769A9154}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{6893C77C-2BBB-4FD0-9188-0B944657A86E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6893C77C-2BBB-4FD0-9188-0B944657A86E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6893C77C-2BBB-4FD0-9188-0B944657A86E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAF65FDB-D612-4D84-A326-D29D769A9154}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAF65FDB-D612-4D84-A326-D29D769A9154}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAF65FDB-D612-4D84-A326-D29D769A9154}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAF65FDB-D612-4D84-A326-D29D769A9154}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

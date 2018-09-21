@@ -29,11 +29,18 @@ namespace NasaPhotoReader
             var dateList = new List<string>();
 
             PhotoUtility.GetConfigurationSection("ImageDates:queryDates").Bind(dateList);
-
-            dateList.ForEach(delegate (string date)
+            try
             {
-                GetImages(date);
-            });
+                dateList.ForEach(delegate (string date)
+                {
+                    GetImages(date);
+                });
+
+            }catch(Exception e)
+            {
+                Console.WriteLine(e.Message);
+                Console.Read();
+            }
         }
         /// <summary>
         /// Retrieve the  images from the Satellite API.
@@ -41,27 +48,35 @@ namespace NasaPhotoReader
         /// <param name="ImageDate"></param>
         private static void GetImages(string ImageDate)
         {
-
-            NasaPhotos.Models.NasaMarsPhotos NasaPhotos = (NasaPhotos.Models.NasaMarsPhotos)PhotoUtility.ExecuteService(PhotoUtility.configuration.GetSection("NasaUrl:url").Value,
-                                                                                                                        String.Format("&earth_date={0}",ImageDate),
-                                                                                                                        typeof(NasaPhotos.Models.NasaMarsPhotos));
-
-           
-            foreach (var photo in NasaPhotos.Photos)
+            try
             {
-                var fileName = photo.Img_Src.Substring(photo.Img_Src.LastIndexOf('/') + 1);
-                Console.WriteLine(photo.Img_Src);
-                if (!PhotoUtility.SaveImage(photo.Img_Src, String.Format(@"{0}\{1}_{2}", PhotoUtility.configuration.GetSection("SaveLocation:path").Value,ImageDate,fileName)))
+
+                NasaPhotos.Models.NasaMarsPhotos NasaPhotos = (NasaPhotos.Models.NasaMarsPhotos)PhotoUtility.ExecuteService(PhotoUtility.configuration.GetSection("NasaUrl:url").Value,
+                                                                                                                            String.Format("&earth_date={0}", ImageDate),
+                                                                                                                          typeof(NasaPhotos.Models.NasaMarsPhotos));
+                // if there was an exception
+                if (NasaPhotos != null)
                 {
-                    Console.WriteLine(String.Format("Unable to save the image : {0}_{1}", ImageDate, fileName));
-                }
-                else
-                {
-                    Console.WriteLine(String.Format("Successfully saved file : {0}_{1}", ImageDate, fileName));
-                }
+
+                    foreach (var photo in NasaPhotos.Photos)
+                    {
+                        var fileName = photo.Img_Src.Substring(photo.Img_Src.LastIndexOf('/') + 1);
+                        Console.WriteLine(photo.Img_Src);
+                        if (!PhotoUtility.SaveImage(photo.Img_Src, String.Format(@"{0}\{1}_{2}", PhotoUtility.configuration.GetSection("SaveLocation:path").Value, ImageDate, fileName)))
+                        {
+                            Console.WriteLine(String.Format("Unable to save the image : {0}_{1}", ImageDate, fileName));
+                        }
+                        else
+                        {
+                            Console.WriteLine(String.Format("Successfully saved file : {0}_{1}", ImageDate, fileName));
+                        }
 
 
-            }
+
+                    }
+                }
+            }catch(Exception) { throw; }
+           
         }       
     }
 }

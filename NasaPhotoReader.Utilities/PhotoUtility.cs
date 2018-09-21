@@ -70,9 +70,7 @@ namespace NasaPhotoReader.Utilities
             catch
                 (JsonSerializationException)
             { return null; }
-            catch
-                (Exception)
-            { throw; }
+           
 
             return deserializedObject;
         }

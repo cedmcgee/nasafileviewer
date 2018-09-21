@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  nasaphotoreader:
+    image: ${DOCKER_REGISTRY}nasaphotoreader
+    build:
+      context: .
+      dockerfile: NasaPhotoReader\Dockerfile
