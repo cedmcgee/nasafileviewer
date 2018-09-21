@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\NasaPhotoReader.Utilities\NasaPhotoReader.Utilities.csproj" />
     <ProjectReference Include="..\NasaPhotos.Models\NasaPhotos.Models.csproj" />
   </ItemGroup>
 

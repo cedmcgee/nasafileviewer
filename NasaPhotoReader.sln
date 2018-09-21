@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NasaPhotoReader", "NasaPhot
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NasaPhotos.Models", "NasaPhotos.Models\NasaPhotos.Models.csproj", "{877CFF7C-4F2C-41DB-8329-8A4835667BEE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NasaPhotoReader.Web", "NasaPictureDisplayer\NasaPhotoReader.Web.csproj", "{5A4EEA14-3407-4172-A2CC-3B78BA083C31}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NasaPhotoReader.Tests", "NasaPhotoReader.Tests\NasaPhotoReader.Tests.csproj", "{95D1684E-E371-4718-A425-8B1CAA398B7A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NasaPhotoReader.Utilities", "NasaPhotoReader.Utilities\NasaPhotoReader.Utilities.csproj", "{D435F101-411A-42A9-8C22-35A6B6AFE364}"
@@ -27,10 +25,6 @@ Global
 		{877CFF7C-4F2C-41DB-8329-8A4835667BEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{877CFF7C-4F2C-41DB-8329-8A4835667BEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{877CFF7C-4F2C-41DB-8329-8A4835667BEE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5A4EEA14-3407-4172-A2CC-3B78BA083C31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5A4EEA14-3407-4172-A2CC-3B78BA083C31}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5A4EEA14-3407-4172-A2CC-3B78BA083C31}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5A4EEA14-3407-4172-A2CC-3B78BA083C31}.Release|Any CPU.Build.0 = Release|Any CPU
 		{95D1684E-E371-4718-A425-8B1CAA398B7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{95D1684E-E371-4718-A425-8B1CAA398B7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95D1684E-E371-4718-A425-8B1CAA398B7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
