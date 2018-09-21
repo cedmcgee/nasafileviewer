@@ -12,4 +12,15 @@
     <PackageReference Include="MSTest.TestFramework" Version="1.3.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NasaPhotoReader.Utilities\NasaPhotoReader.Utilities.csproj" />
+    <ProjectReference Include="..\NasaPhotos.Models\NasaPhotos.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
