@@ -64,7 +64,7 @@ namespace NasaPhotoReader
                         Console.WriteLine(photo.Img_Src);
                         if (!PhotoUtility.SaveImage(photo.Img_Src, String.Format(@"{0}\{1}_{2}", PhotoUtility.configuration.GetSection("SaveLocation:path").Value, ImageDate, fileName)))
                         {
-                            Console.WriteLine(String.Format("Unable to save the image : {0}_{1}", ImageDate, fileName));
+                            Console.WriteLine(String.Format(" Unable to save the image : {0}_{1}", ImageDate, fileName));
                         }
                         else
                         {

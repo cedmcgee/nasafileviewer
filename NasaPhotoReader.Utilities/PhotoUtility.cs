@@ -34,8 +34,12 @@ namespace NasaPhotoReader.Utilities
         /// <returns></returns>
         public static bool SaveImage(string imageUrl, string saveLocation)
         {
+           
             try
             {
+                // Check to see if the directory exit. 
+                // if (!Directory.Exists(saveLocation)) { Directory.CreateDirectory(saveLocation); }
+
                 byte[] imageData;
                 using (WebClient webClient = new WebClient())
                 {
